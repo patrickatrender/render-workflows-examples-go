@@ -1,6 +1,6 @@
 module github.com/patrickatrender/render-workflows-examples-go
 
-go 1.27.0
+go 1.26.6
 
 require github.com/render-oss/sdk/go v0.1.0
 
