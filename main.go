@@ -39,6 +39,14 @@ func summarizeDeploy(ctx tasks.TaskContext, report DeployReport) string {
 		report.Service, report.Attempts, report.CreatedAt.Format(time.RFC3339), report.Labels)
 }
 
+// summarizeDeploy takes a struct containing a time.Time, which the SDK decodes
+// from either ["{...}"] positional input or a {...} object input.
+func summarizeDeployMap(ctx tasks.TaskContext, report map[string]any) string {
+	createdAt, _ := time.Parse(time.RFC3339, report["created_at"].(string))
+	return fmt.Sprintf("%s failed %d time(s) as of %s (labels: %v)",
+		report["service"], report["attempts"], createdAt.Format(time.RFC3339), report["labels"])
+}
+
 // DeployReport is decoded straight into the task parameter, so its JSON tags
 // double as the named parameters when the task is triggered with object input.
 type DeployReport struct {
@@ -53,5 +61,6 @@ func main() {
 	tasks.MustRegister(addSquares)
 
 	tasks.MustRegister(summarizeDeploy)
+	tasks.MustRegister(summarizeDeployMap)
 	tasks.Start()
 }
