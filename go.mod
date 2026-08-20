@@ -2,10 +2,10 @@ module github.com/patrickatrender/render-workflows-examples-go
 
 go 1.26.6
 
-require github.com/render-oss/sdk/go v0.1.0
+require github.com/render-oss/sdk/go v0.1.1-0.20260820162737-b1cd5ef1e897
 
-// pin to a private renderinc/sdk commit; module path there is unchanged from render-oss/sdk
-replace github.com/render-oss/sdk/go => github.com/renderinc/sdk/go v0.0.0-20260820023753-3fa63beb7a6f
+// // pin to a private renderinc/sdk commit; module path there is unchanged from render-oss/sdk
+// replace github.com/render-oss/sdk/go => github.com/renderinc/sdk/go v0.0.0-20260820023753-3fa63beb7a6f
 
 require (
 	github.com/apapsch/go-jsonmerge/v2 v2.0.0 // indirect

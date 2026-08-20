@@ -28,6 +28,8 @@ github.com/oapi-codegen/runtime v1.2.0 h1:RvKc1CVS1QeKSNzO97FBQbSMZyQ8s6rZd+Lpmz
 github.com/oapi-codegen/runtime v1.2.0/go.mod h1:Y7ZhmmlE8ikZOmuHRRndiIm7nf3xcVv+YMweKgG1DT0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/render-oss/sdk/go v0.1.1-0.20260820162737-b1cd5ef1e897 h1:tQ7Pdvac41RWs5HkxVq0Bhdy3JdOXpVSHpy88Cjnt0A=
+github.com/render-oss/sdk/go v0.1.1-0.20260820162737-b1cd5ef1e897/go.mod h1:7wcF8VCBgDC0vidl9oHvlNLg8SrbvV77kl50apMwgPk=
 github.com/renderinc/sdk/go v0.0.0-20260820023753-3fa63beb7a6f h1:uQm5lLs3I0N7ZukIB9USVqO1V2N4n7Tyq/yT7DEJtIQ=
 github.com/renderinc/sdk/go v0.0.0-20260820023753-3fa63beb7a6f/go.mod h1:7wcF8VCBgDC0vidl9oHvlNLg8SrbvV77kl50apMwgPk=
 github.com/spkg/bom v0.0.0-20160624110644-59b7046e48ad/go.mod h1:qLr4V1qq6nMqFKkMo8ZTx3f+BZEkzsRUY10Xsm2mwU0=
