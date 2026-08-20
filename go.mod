@@ -8,7 +8,9 @@ require github.com/render-oss/sdk/go v0.1.0
 replace github.com/render-oss/sdk/go => github.com/renderinc/sdk/go v0.0.0-20260820023753-3fa63beb7a6f
 
 require (
+	github.com/apapsch/go-jsonmerge/v2 v2.0.0 // indirect
 	github.com/go-chi/chi/v5 v5.3.1 // indirect
+	github.com/google/uuid v1.5.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.8 // indirect
 	github.com/kelseyhightower/envconfig v1.4.0 // indirect
