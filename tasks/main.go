@@ -47,6 +47,10 @@ func summarizeDeployMap(ctx tasks.TaskContext, report map[string]any) string {
 		report["service"], report["attempts"], createdAt.Format(time.RFC3339), report["labels"])
 }
 
+func processWorkflowPayload(ctx tasks.TaskContext, payload WorkflowPayload) string {
+	return fmt.Sprintf("Processing workflow payload for channel: %s", payload.ChannelID)
+}
+
 // DeployReport is decoded straight into the task parameter, so its JSON tags
 // double as the named parameters when the task is triggered with object input.
 type DeployReport struct {
@@ -56,11 +60,29 @@ type DeployReport struct {
 	Labels    map[string]string `json:"labels"`
 }
 
+type WorkflowPayload struct {
+	ChannelID          string
+	RenderOwnerID      string
+	BotID              string
+	EncAccessToken     string
+	AccessTokenKeyID   string
+	EncRefreshToken    string
+	RefreshTokenKeyID  string
+	Intent             string
+	StandaloneQuery    string
+	RequiresLiveData   bool
+	IsTroubleshooting  bool
+	IsResourceSpecific bool
+	ResourceType       string
+}
+
 func main() {
 	tasks.MustRegister(square)
 	tasks.MustRegister(addSquares)
 
 	tasks.MustRegister(summarizeDeploy)
 	tasks.MustRegister(summarizeDeployMap)
+
+	tasks.MustRegister(processWorkflowPayload)
 	tasks.Start()
 }

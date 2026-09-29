@@ -20,7 +20,7 @@ type DeployReport struct {
 
 func main() {
 	// Example usage of the render client
-	client, err := render.NewClient()
+	client, err := render.NewClient(render.WithToken("rnd_ILbBpWhfHEaAtGeFtikKJCsifuL5"))
 	if err != nil {
 		log.Fatalf("Failed to create render client: %v", err)
 	}
