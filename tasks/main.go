@@ -64,10 +64,8 @@ type WorkflowPayload struct {
 	ChannelID          string
 	RenderOwnerID      string
 	BotID              string
-	EncAccessToken     string
-	AccessTokenKeyID   string
-	EncRefreshToken    string
-	RefreshTokenKeyID  string
+	CredentialID       string
+	ChannelDefaultID   string
 	Intent             string
 	StandaloneQuery    string
 	RequiresLiveData   bool
